@@ -1,4 +1,4 @@
-import Storage from 'expo-sqlite/kv-store';
+import { storage } from '../utils/storage';
 import {
   createContext,
   useCallback,
@@ -35,7 +35,7 @@ function isValidPlan(value: unknown): value is DatePlan {
 
 function loadPlan(): DatePlan | null {
   try {
-    const raw = Storage.getItemSync(STORAGE_KEY);
+    const raw = storage.get(STORAGE_KEY);
     if (!raw) return null;
     const parsed: unknown = JSON.parse(raw);
     return isValidPlan(parsed) ? parsed : null;
@@ -52,14 +52,14 @@ export function DatePlanProvider({ children }: PropsWithChildren) {
   const savePlan = useCallback((next: DatePlan) => {
     setPlan(next);
     try {
-      Storage.setItemSync(STORAGE_KEY, JSON.stringify(next));
+      storage.set(STORAGE_KEY, JSON.stringify(next));
     } catch {}
   }, []);
 
   const clearPlan = useCallback(() => {
     setPlan(null);
     try {
-      Storage.removeItemSync(STORAGE_KEY);
+      storage.remove(STORAGE_KEY);
     } catch {}
   }, []);
 
