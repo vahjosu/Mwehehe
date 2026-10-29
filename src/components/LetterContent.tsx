@@ -12,23 +12,29 @@ export function LetterContent({ onExplore }: { onExplore: () => void }) {
         description="A little something to celebrate us."
       />
       <View style={styles.letter}>
-        <Text style={styles.salutation}>My love,</Text>
+        <Text style={styles.salutation}>Hi love,</Text>
         <Text style={styles.paragraph}>
-          If I could wrap up a feeling and give it to you, it would be this: how
-          lucky I feel to love you.
+          Happy third monthsary, my love. ❤️
         </Text>
         <Text style={styles.paragraph}>
-          I love the way you make ordinary moments feel like somewhere I want to
-          stay. The laughter, the quiet, the simple joy of being beside you.
+          Thank you for everything—for being there through the highs and lows,
+          for taking care of me when I was sick, and for staying by my side even
+          during times when we didn’t have much to eat. Those moments mean more
+          to me than you know.
         </Text>
         <Text style={styles.paragraph}>
-          So here’s a little place to keep that feeling. A reminder that you are
-          loved, in all the little ways, every day.
+          You deserve someone who will treat you like a queen, yet you chose me.
+          I’m so grateful to have you in my life, and I promise to keep loving
+          you, appreciating you, and doing my best for you.
         </Text>
-        <View style={styles.signatureRow}>
-          <Text style={styles.signature}>Always, me</Text>
-          <Text style={styles.signatureHeart}>♡</Text>
-        </View>
+        <Text style={styles.paragraph}>
+          I may not have written this letter myself, but I hope my love reaches
+          you in a way that makes you feel special. I hope you love your gift and
+          enjoy exploring our memories together.
+        </Text>
+        <Text style={styles.paragraph}>
+          Again, happy monthsary, baby. I love you so, so much. Mmmwaaaah! 💋
+        </Text>
       </View>
       <Text style={styles.note}>
         KEEP THIS CLOSE, ON THE BRIGHT DAYS AND THE QUIET ONES
@@ -66,22 +72,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 23,
     marginBottom: 14,
-  },
-  signatureRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginTop: 1,
-  },
-  signature: {
-    color: colors.blue,
-    fontFamily: type.script,
-    fontSize: 17,
-    fontStyle: 'italic',
-  },
-  signatureHeart: {
-    color: colors.blue,
-    fontSize: 23,
   },
   note: {
     color: '#8BA4B3',
